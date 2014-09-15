@@ -1,0 +1,13 @@
+#store-list img {
+  height: 80px;
+}
+#store-list h4 {
+  white-space: normal;
+}
+
+#bookdate {
+  margin: 0;
+}
+#bookdate.segmented > .button {
+  border-radius: 0;
+}

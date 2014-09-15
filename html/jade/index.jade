@@ -1,0 +1,40 @@
+extends layout
+block content
+  - var nav = 'index'
+  nav#global-nav
+  nav(data-nav-for="main")
+    h1 选择店铺
+  article#main.current.navigable
+    section
+      ul#store-list.list
+        - for (var x = 1; x <= 5; x++)
+          li.comp(data-goto="people")
+            aside
+              img(title="杨箕店",src="pic/store/"+x+".jpg")
+            div
+              h3 杨箕店
+              h4 020-88888888
+              h4 越秀区中山一路57号(近杨箕地铁A出口)
+            aside
+              h4 333米
+              span.nav
+
+  nav
+    a#backToMain.button.back(href='#') Back
+    h1 杨箕店
+  article#book.next
+    section
+      div.horizontal.centered
+        div#bookdate.segmented
+          a.button.selected(role="radio",aria-checked="true") 
+            div 今天
+            div 9-10 周一
+          a.button(role="radio")
+            div 明天
+            div 9-11 周二
+          a.button(role="radio")
+            div 后天
+            div 9-12 周三
+        .grid
+          .flex-5 234
+          .flex-5 234
